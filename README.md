@@ -1,12 +1,12 @@
-# Moteur
+# :gear: Moteur
 
 A tiny Web/TS engine.
 
-## Examples
+## :mag: Examples
 
 - [planet](./examples/planet/README.md): An example with UI/ECS interactions.
 
-## Packages
+## :package: Packages
 
 - `@moteur/core`: Base game.
 - `@moteur/ecs`: An entity-component-system (ECS).
@@ -14,7 +14,7 @@ A tiny Web/TS engine.
 - `@moteur/gfx`: A WebGL renderer.
 - `@moteur/ui`: An interface with UI.
 
-## Getting Started
+## :round_pushpin: Getting Started
 
 ### Arch
 
