@@ -2,6 +2,10 @@
 
 A tiny Web/TS engine.
 
+## Examples
+
+- [planet](./examples/planet/README.md): An example with UI/ECS interactions.
+
 ## Packages
 
 - `@webng/core`: Base game.
@@ -9,10 +13,6 @@ A tiny Web/TS engine.
 - `@webng/event`: An event system.
 - `@webng/gfx`: A WebGL renderer.
 - `@webng/ui`: An interface with UI.
-
-## Examples
-
-- `planet`: An example with UI/ECS interactions.
 
 ## Getting Started
 
