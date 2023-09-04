@@ -1,0 +1,13 @@
+{
+    "name": "@webng/animation",
+    "main": "dist",
+    "scripts": {
+        "build": "tsc",
+        "build-engine": "tsc",
+        "dev": "tsc -w",
+        "clean": "rm -rf ./dist"
+    },
+    "dependencies": {
+        "@webng/ecs": "workspace:*"
+    }
+}

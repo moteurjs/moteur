@@ -1,0 +1,14 @@
+{
+    "name": "@webng/physics",
+    "main": "dist",
+    "scripts": {
+        "build": "tsc",
+        "build-engine": "tsc",
+        "dev": "tsc -w",
+        "clean": "rm -rf ./dist"
+    },
+    "dependencies": {
+        "@webng/ecs": "workspace:*",
+        "@webng/math": "workspace:*"
+    }
+}
