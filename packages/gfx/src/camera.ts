@@ -1,3 +1,3 @@
-import { Component } from "@webng/ecs";
+import { Component } from "@moteur/ecs";
 
 export class Camera extends Component {}

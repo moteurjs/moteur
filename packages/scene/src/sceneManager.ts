@@ -1,5 +1,5 @@
 import { Scene } from "./scene";
-import { System } from "@webng/ecs";
+import { System } from "@moteur/ecs";
 
 export interface SceneManagerProps {
     sceneName: string;

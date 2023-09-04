@@ -1,4 +1,4 @@
-import { Vector2 } from "@webng/math";
+import { Vector2 } from "@moteur/math";
 
 export enum ShaderVariableType {
     INT1,

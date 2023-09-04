@@ -1,14 +1,14 @@
 {
-    "name": "@webng/physics",
+    "name": "@moteur/physics",
     "main": "dist",
     "scripts": {
         "build": "tsc",
-        "build-engine": "tsc",
+        "build-moteur": "pnpm build",
         "dev": "tsc -w",
         "clean": "rm -rf ./dist"
     },
     "dependencies": {
-        "@webng/ecs": "workspace:*",
-        "@webng/math": "workspace:*"
+        "@moteur/ecs": "workspace:*",
+        "@moteur/math": "workspace:*"
     }
 }

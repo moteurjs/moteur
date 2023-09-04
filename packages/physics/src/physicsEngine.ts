@@ -1,6 +1,6 @@
 import { RigidBody } from "./rigidBody";
-import { System } from "@webng/ecs";
-import { Transform } from "@webng/math";
+import { System } from "@moteur/ecs";
+import { Transform } from "@moteur/math";
 
 export class PhysicsEngine extends System {
     private previousTimestamp: number = undefined as any as number;

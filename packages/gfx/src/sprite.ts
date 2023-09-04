@@ -1,5 +1,5 @@
 import { Texture } from "./texture";
-import { Component } from "@webng/ecs";
+import { Component } from "@moteur/ecs";
 
 export interface SpriteProps {
     texture: Texture;

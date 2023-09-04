@@ -1,13 +1,13 @@
 {
-    "name": "@webng/scene",
+    "name": "@moteur/scene",
     "main": "dist",
     "scripts": {
         "build": "tsc",
-        "build-engine": "tsc",
+        "build-moteur": "pnpm build",
         "dev": "tsc -w",
         "clean": "rm -rf ./dist"
     },
     "dependencies": {
-        "@webng/ecs": "workspace:*"
+        "@moteur/ecs": "workspace:*"
     }
 }

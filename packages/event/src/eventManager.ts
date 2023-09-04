@@ -1,5 +1,5 @@
 import { Event } from "./event";
-import { System } from "@webng/ecs";
+import { System } from "@moteur/ecs";
 
 export class EventManager extends System {
     private inputQueue: Event[];

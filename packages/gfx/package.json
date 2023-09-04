@@ -1,15 +1,15 @@
 {
-    "name": "@webng/gfx",
+    "name": "@moteur/gfx",
     "main": "dist",
     "scripts": {
         "build": "tsc",
-        "build-engine": "tsc",
+        "build-moteur": "pnpm build",
         "dev": "tsc -w",
         "clean": "rm -rf ./dist"
     },
     "dependencies": {
-        "@webng/ecs": "workspace:*",
-        "@webng/math": "workspace:*"
+        "@moteur/ecs": "workspace:*",
+        "@moteur/math": "workspace:*"
     },
     "devDependencies": {
         "@types/web": "^0.0.114"

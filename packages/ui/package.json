@@ -1,14 +1,14 @@
 {
-    "name": "@webng/ui",
+    "name": "@moteur/ui",
     "main": "dist",
     "scripts": {
         "build": "tsc",
-        "build-engine": "tsc",
+        "build-moteur": "pnpm build",
         "dev": "tsc -w",
         "clean": "rm -rf ./dist"
     },
     "dependencies": {
-        "@webng/ecs": "workspace:*",
-        "@webng/event": "workspace:*"
+        "@moteur/ecs": "workspace:*",
+        "@moteur/event": "workspace:*"
     }
 }

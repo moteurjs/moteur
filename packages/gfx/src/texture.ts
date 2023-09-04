@@ -1,4 +1,4 @@
-import { Rectangle } from "@webng/math";
+import { Rectangle } from "@moteur/math";
 
 export class Texture {
     private constructor(

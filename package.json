@@ -1,12 +1,12 @@
 {
-    "name": "webng",
+    "name": "moteur",
     "engines": {
         "pnpm": ">=7"
     },
     "packageManager": "pnpm@7.4.1",
     "scripts": {
-        "build": "pnpm run build-engine && pnpm run build-examples",
-        "build-engine": "turbo run \"build-engine\"",
+        "build": "pnpm run build-moteur && pnpm run build-examples",
+        "build-moteur": "turbo run \"build-moteur\"",
         "build-examples": "turbo run \"build-example\"",
         "clean": "turbo run clean",
         "format": "prettier --write examples packages"

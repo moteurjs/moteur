@@ -1,14 +1,14 @@
 {
-    "name": "@webng/event",
+    "name": "@moteur/event",
     "main": "dist",
     "scripts": {
         "build": "tsc",
-        "build-engine": "tsc",
+        "build-moteur": "pnpm build",
         "dev": "tsc -w",
         "clean": "rm -rf ./dist"
     },
     "dependencies": {
-        "@webng/ecs": "workspace:*"
+        "@moteur/ecs": "workspace:*"
     },
     "devDependencies": {
         "@types/web": "^0.0.114"

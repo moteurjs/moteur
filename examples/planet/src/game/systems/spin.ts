@@ -1,7 +1,7 @@
 import { Spin } from "../components/spin";
-import { System } from "@webng/ecs";
-import { Transform } from "@webng/math";
-import { ButtonClickEvent } from "@webng/ui";
+import { System } from "@moteur/ecs";
+import { Transform } from "@moteur/math";
+import { ButtonClickEvent } from "@moteur/ui";
 
 export interface SpinSystemProps {
     buttonId: string;

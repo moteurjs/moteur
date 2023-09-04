@@ -1,8 +1,8 @@
 {
     "baseBranch": "origin/main",
     "pipeline": {
-        "build-engine": {
-            "dependsOn": ["^build-engine"]
+        "build-moteur": {
+            "dependsOn": ["^build-moteur"]
         },
         "build-example": {
             "dependsOn": ["^build-example"]

@@ -1,18 +1,18 @@
 {
-    "name": "@webng/example-planet",
+    "name": "@moteur/example-planet",
     "scripts": {
         "build": "vite build",
-        "build-example": "vite build",
+        "build-example": "pnpm build",
         "dev": "vite dev",
         "clean": "rm -rf ./dist"
     },
     "dependencies": {
-        "@webng/core": "workspace:*",
-        "@webng/ecs": "workspace:*",
-        "@webng/event": "workspace:*",
-        "@webng/gfx": "workspace:*",
-        "@webng/math": "workspace:*",
-        "@webng/ui": "workspace:*",
+        "@moteur/core": "workspace:*",
+        "@moteur/ecs": "workspace:*",
+        "@moteur/event": "workspace:*",
+        "@moteur/gfx": "workspace:*",
+        "@moteur/math": "workspace:*",
+        "@moteur/ui": "workspace:*",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },

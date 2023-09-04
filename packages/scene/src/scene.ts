@@ -1,4 +1,4 @@
-import { Component } from "@webng/ecs";
+import { Component } from "@moteur/ecs";
 
 export interface SceneProps {
     name: string;

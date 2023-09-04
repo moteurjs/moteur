@@ -1,4 +1,4 @@
-import { Event, EventManager } from "@webng/event";
+import { Event, EventManager } from "@moteur/event";
 
 export class ButtonClickEvent extends Event {
     public constructor(public id: string) {

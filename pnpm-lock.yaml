@@ -21,24 +21,24 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
-  examples/spin:
+  examples/planet:
     dependencies:
-      '@webng/core':
+      '@moteur/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@webng/ecs':
+      '@moteur/ecs':
         specifier: workspace:*
         version: link:../../packages/ecs
-      '@webng/event':
+      '@moteur/event':
         specifier: workspace:*
         version: link:../../packages/event
-      '@webng/gfx':
+      '@moteur/gfx':
         specifier: workspace:*
         version: link:../../packages/gfx
-      '@webng/math':
+      '@moteur/math':
         specifier: workspace:*
         version: link:../../packages/math
-      '@webng/ui':
+      '@moteur/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       react:
@@ -75,13 +75,13 @@ importers:
 
   packages/animation:
     dependencies:
-      '@webng/ecs':
+      '@moteur/ecs':
         specifier: workspace:*
         version: link:../ecs
 
   packages/core:
     dependencies:
-      '@webng/ecs':
+      '@moteur/ecs':
         specifier: workspace:*
         version: link:../ecs
 
@@ -89,7 +89,7 @@ importers:
 
   packages/event:
     dependencies:
-      '@webng/ecs':
+      '@moteur/ecs':
         specifier: workspace:*
         version: link:../ecs
     devDependencies:
@@ -99,10 +99,10 @@ importers:
 
   packages/gfx:
     dependencies:
-      '@webng/ecs':
+      '@moteur/ecs':
         specifier: workspace:*
         version: link:../ecs
-      '@webng/math':
+      '@moteur/math':
         specifier: workspace:*
         version: link:../math
     devDependencies:
@@ -112,31 +112,31 @@ importers:
 
   packages/math:
     dependencies:
-      '@webng/ecs':
+      '@moteur/ecs':
         specifier: workspace:*
         version: link:../ecs
 
   packages/physics:
     dependencies:
-      '@webng/ecs':
+      '@moteur/ecs':
         specifier: workspace:*
         version: link:../ecs
-      '@webng/math':
+      '@moteur/math':
         specifier: workspace:*
         version: link:../math
 
   packages/scene:
     dependencies:
-      '@webng/ecs':
+      '@moteur/ecs':
         specifier: workspace:*
         version: link:../ecs
 
   packages/ui:
     dependencies:
-      '@webng/ecs':
+      '@moteur/ecs':
         specifier: workspace:*
         version: link:../ecs
-      '@webng/event':
+      '@moteur/event':
         specifier: workspace:*
         version: link:../event
 

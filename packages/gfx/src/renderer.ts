@@ -3,8 +3,8 @@ import { Geometry } from "./geometry";
 import { Shader, ShaderVariableType } from "./shader";
 import { FRAGMENT_SHADER, VERTEX_SHADER } from "./shaders/sprite";
 import { Sprite } from "./sprite";
-import { Component, System } from "@webng/ecs";
-import { Transform } from "@webng/math";
+import { Component, System } from "@moteur/ecs";
+import { Transform } from "@moteur/math";
 
 export class RenderContext extends Component {
     public readonly canvas: HTMLCanvasElement =

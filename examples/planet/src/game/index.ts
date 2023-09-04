@@ -1,15 +1,15 @@
 import { Spin } from "./components/spin";
 import { SpinSystem } from "./systems/spin";
-import { Game } from "@webng/core";
-import { EventManager } from "@webng/event";
+import { Game } from "@moteur/core";
+import { EventManager } from "@moteur/event";
 import {
     Camera,
     RenderContext,
     Sprite,
     SpriteRenderer,
     Texture,
-} from "@webng/gfx";
-import { Transform, Vector2 } from "@webng/math";
+} from "@moteur/gfx";
+import { Transform, Vector2 } from "@moteur/math";
 
 const ENTITY_COUNT = 1000;
 

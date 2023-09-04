@@ -1,4 +1,4 @@
-import { Component, EntityStorage, System } from "@webng/ecs";
+import { Component, EntityStorage, System } from "@moteur/ecs";
 
 export abstract class Game {
     private readonly entities: EntityStorage;

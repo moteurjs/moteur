@@ -1,4 +1,4 @@
-import { onButtonClick } from "@webng/ui";
+import { onButtonClick } from "@moteur/ui";
 import { useState } from "react";
 
 const SpinIcon = () => (

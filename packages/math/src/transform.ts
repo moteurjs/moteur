@@ -1,5 +1,5 @@
 import { Vector2 } from "./vector";
-import { Component } from "@webng/ecs";
+import { Component } from "@moteur/ecs";
 
 export interface TransformProps {
     position?: Vector2;

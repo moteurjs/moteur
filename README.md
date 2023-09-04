@@ -1,4 +1,4 @@
-# WebNG
+# Moteur
 
 A tiny Web/TS engine.
 
@@ -8,11 +8,11 @@ A tiny Web/TS engine.
 
 ## Packages
 
-- `@webng/core`: Base game.
-- `@webng/ecs`: An entity-component-system (ECS).
-- `@webng/event`: An event system.
-- `@webng/gfx`: A WebGL renderer.
-- `@webng/ui`: An interface with UI.
+- `@moteur/core`: Base game.
+- `@moteur/ecs`: An entity-component-system (ECS).
+- `@moteur/event`: An event system.
+- `@moteur/gfx`: A WebGL renderer.
+- `@moteur/ui`: An interface with UI.
 
 ## Getting Started
 
