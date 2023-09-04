@@ -1,0 +1,16 @@
+{
+    "name": "@webng/event",
+    "main": "dist",
+    "scripts": {
+        "build": "tsc",
+        "build-engine": "tsc",
+        "dev": "tsc -w",
+        "clean": "rm -rf ./dist"
+    },
+    "dependencies": {
+        "@webng/ecs": "workspace:*"
+    },
+    "devDependencies": {
+        "@types/web": "^0.0.114"
+    }
+}

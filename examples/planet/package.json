@@ -1,0 +1,29 @@
+{
+    "name": "@webng/example-planet",
+    "scripts": {
+        "build": "vite build",
+        "build-example": "vite build",
+        "dev": "vite dev",
+        "clean": "rm -rf ./dist"
+    },
+    "dependencies": {
+        "@webng/core": "workspace:*",
+        "@webng/ecs": "workspace:*",
+        "@webng/event": "workspace:*",
+        "@webng/gfx": "workspace:*",
+        "@webng/math": "workspace:*",
+        "@webng/ui": "workspace:*",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.21",
+        "@types/react-dom": "^18.2.7",
+        "@types/web": "^0.0.114",
+        "@vitejs/plugin-react": "^4.0.4",
+        "autoprefixer": "^10.4.15",
+        "postcss": "^8.4.29",
+        "tailwindcss": "^3.3.3",
+        "vite": "^4.4.9"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "@webng/ecs",
+    "main": "dist",
+    "scripts": {
+        "build": "tsc",
+        "build-engine": "tsc",
+        "dev": "tsc -w",
+        "clean": "rm -rf ./dist"
+    }
+}

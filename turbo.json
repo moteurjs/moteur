@@ -1,0 +1,14 @@
+{
+    "baseBranch": "origin/main",
+    "pipeline": {
+        "build-engine": {
+            "dependsOn": ["^build-engine"]
+        },
+        "build-example": {
+            "dependsOn": ["^build-example"]
+        },
+        "clean": {
+            "dependsOn": ["^clean"]
+        }
+    }
+}
