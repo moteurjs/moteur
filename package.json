@@ -23,7 +23,7 @@
     },
     "packageManager": "pnpm@7.4.1",
     "scripts": {
-        "build": "pnpm run build-moteur && pnpm run build-examples",
+        "build": "pnpm run build-moteur",
         "build-moteur": "turbo run \"build-moteur\"",
         "build-examples": "turbo run \"build-example\"",
         "package": "pnpm run package-moteur",
