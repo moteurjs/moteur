@@ -20,5 +20,6 @@ jobs:
             - run: pnpm install
             - run: pnpm build
             - run: pnpm package
-            - run: find dist -printf "%P\n" | tar -czvf dist.tgz -C dist -T -
-            - run: pnpm publish dist.tgz --access public
+            - run: pnpm pack
+              working-directory: ./dist
+            - run: pnpm publish ./dist/moteur-*.tgz --access public
