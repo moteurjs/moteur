@@ -20,5 +20,6 @@ jobs:
             - run: pnpm install
             - run: pnpm build
             - run: pnpm package
-            - run: pnpm publish --recursive --access public
+            - run: tar -czvf ../dist.tgz .
               working-directory: ./dist
+            - run: pnpm publish ./dist.tgz --access public
