@@ -1,15 +1,15 @@
 {
     "name": "moteur",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A tiny Web/TS engine",
     "license": "MIT",
-    "homepage": "https://github.com/alexandre-lavoie/moteur#readme",
+    "homepage": "https://github.com/moteurjs",
     "repository": {
         "type": "git",
-        "url": "https://github.com/alexandre-lavoie/moteur"
+        "url": "https://github.com/moteurjs/moteur"
     },
     "bugs": {
-        "url": "https://github.com/alexandre-lavoie/moteur/issues"
+        "url": "https://github.com/moteurjs/moteur/issues"
     },
     "keywords": [
         "TypeScript",

@@ -8,17 +8,16 @@ A tiny Web/TS engine.
 
 ## :package: Packages
 
--   `@moteur/core`: Base game.
--   `@moteur/ecs`: An entity-component-system (ECS).
--   `@moteur/event`: An event system.
--   `@moteur/gfx`: A WebGL renderer.
--   `@moteur/ui`: An interface with UI.
+-   `moteur/core`: Base game.
+-   `moteur/ecs`: An entity-component-system (ECS).
+-   `moteur/event`: An event system.
+-   `moteur/gfx`: A WebGL renderer.
+-   `moteur/ui`: An interface with UI.
 
 ## :round_pushpin: Getting Started
 
-### Arch
+### Install
 
 ```
-pacman -S node pnpm
-pnpm install
+npm install moteur
 ```
