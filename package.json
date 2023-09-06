@@ -5,8 +5,8 @@
     "license": "MIT",
     "homepage": "https://github.com/alexandre-lavoie/moteur#readme",
     "repository": {
-        "url": "https://github.com/alexandre-lavoie/moteur",
-        "type": "git"
+        "type": "git",
+        "url": "https://github.com/alexandre-lavoie/moteur"
     },
     "bugs": {
         "url": "https://github.com/alexandre-lavoie/moteur/issues"
@@ -28,7 +28,7 @@
         "build-examples": "turbo run \"build-example\"",
         "package": "pnpm run package-moteur",
         "package-moteur": "ts-node --project tsconfig.node.json tools/package.ts",
-        "format": "prettier --write examples packages tools"
+        "format": "prettier --write ."
     },
     "devDependencies": {
         "@trivago/prettier-plugin-sort-imports": "^4.2.0",

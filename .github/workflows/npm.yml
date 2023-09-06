@@ -1,0 +1,23 @@
+name: Npmjs
+on:
+    release:
+        types: [published]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: "16.x"
+                  registry-url: "https://registry.npmjs.org"
+                  cache: "pnpm"
+            - run: pnpm install
+            - run: pnpm build
+            - run: pnpm package
+            - run: pnpm publish
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
