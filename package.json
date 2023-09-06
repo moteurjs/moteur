@@ -13,10 +13,10 @@
     },
     "keywords": [
         "TypeScript",
-        "web",
-        "game",
-        "engine",
-        "javascript"
+        "JavaScript",
+        "Web",
+        "Game",
+        "Engine"        
     ],
     "engines": {
         "pnpm": ">=7"

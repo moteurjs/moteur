@@ -63,9 +63,14 @@ function copyPackageJson() {
     );
 }
 
+function copyReadme() {
+    fs.copyFileSync("README.md", "dist/README.md");
+}
+
 function main() {
     createDist();
     copyFiles();
+    copyReadme();
     copyPackageJson();
 }
 
