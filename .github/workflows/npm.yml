@@ -20,6 +20,5 @@ jobs:
             - run: pnpm install
             - run: pnpm build
             - run: pnpm package
-            - run: tar -czvf ../dist.tgz *
-              working-directory: ./dist
-            - run: pnpm publish ./dist.tgz --access public
+            - run: find dist -printf "%P\n" | tar -czvf dist.tgz -C dist -T -
+            - run: pnpm publish dist.tgz --access public
