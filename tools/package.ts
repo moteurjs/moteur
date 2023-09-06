@@ -52,7 +52,7 @@ function copyPackageJson() {
         engines: undefined,
         packageManager: undefined,
         scripts: undefined,
-        devDependencies: undefined
+        devDependencies: undefined,
     };
 
     fs.writeFileSync(
