@@ -1,5 +1,23 @@
 {
     "name": "moteur",
+    "version": "0.0.1",
+    "description": "A tiny Web/TS engine",
+    "license": "MIT",
+    "homepage": "https://github.com/alexandre-lavoie/moteur#readme",
+    "repository": {
+        "url": "https://github.com/alexandre-lavoie/moteur",
+        "type": "git"
+    },
+    "bugs": {
+        "url": "https://github.com/alexandre-lavoie/moteur/issues"
+    },
+    "keywords": [
+        "TypeScript",
+        "web",
+        "game",
+        "engine",
+        "javascript"
+    ],
     "engines": {
         "pnpm": ">=7"
     },
@@ -8,12 +26,15 @@
         "build": "pnpm run build-moteur && pnpm run build-examples",
         "build-moteur": "turbo run \"build-moteur\"",
         "build-examples": "turbo run \"build-example\"",
-        "clean": "turbo run clean",
-        "format": "prettier --write examples packages"
+        "package": "pnpm run package-moteur",
+        "package-moteur": "ts-node --project tsconfig.node.json tools/package.ts",
+        "format": "prettier --write examples packages tools"
     },
     "devDependencies": {
         "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+        "@types/node": "^20.5.9",
         "prettier": "^3.0.3",
+        "ts-node": "^10.9.1",
         "turbo": "^1.10.13",
         "typescript": "^5.2.2"
     }

@@ -6,9 +6,6 @@
         },
         "build-example": {
             "dependsOn": ["^build-example"]
-        },
-        "clean": {
-            "dependsOn": ["^clean"]
         }
     }
 }

@@ -3,8 +3,7 @@
     "scripts": {
         "build": "vite build",
         "build-example": "pnpm build",
-        "dev": "vite dev",
-        "clean": "rm -rf ./dist"
+        "dev": "vite dev"
     },
     "dependencies": {
         "@moteur/core": "workspace:*",

@@ -2,10 +2,9 @@
     "name": "@moteur/physics",
     "main": "dist",
     "scripts": {
-        "build": "tsc",
-        "build-moteur": "pnpm build",
-        "dev": "tsc -w",
-        "clean": "rm -rf ./dist"
+        "build": "pnpm build-moteur",
+        "build-moteur": "tsc",
+        "dev": "tsc -w"
     },
     "dependencies": {
         "@moteur/ecs": "workspace:*",
