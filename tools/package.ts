@@ -1,9 +1,6 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 
-const FILE_REGEX = /\.(d\.ts|js)$/i;
-const SOURCE_MAP_REGEX = /\/\/\# sourceMappingURL\=.*$/gi;
-
 function packageDist(packageName: string): string {
     return path.join("packages", packageName, "dist");
 }
@@ -20,17 +17,66 @@ function getFiles(nodePath: string): string[] {
         .flatMap((node) => getFiles(path.join(nodePath, node)));
 }
 
+function replaceAbsoluteInclude(relativePath: string, data: string): string {
+    const fileDepth = relativePath.split("/").length;
+    const relativeInclude = new Array(fileDepth).fill("..").join("/") + "/";
+
+    return data.replaceAll("@moteur/", relativeInclude);
+}
+
+function copyJS(
+    packageName: string,
+    relativePath: string,
+    srcPath: string,
+    destPath: string,
+) {
+    let data = fs.readFileSync(srcPath).toString("utf8");
+    data = replaceAbsoluteInclude(relativePath, data);
+
+    fs.writeFileSync(destPath, data);
+
+    srcPath = path.join(
+        "packages",
+        packageName,
+        "src",
+        relativePath.replace(/.js$/, ".ts"),
+    );
+    destPath = destPath.replace(/.js$/, ".ts");
+
+    data = fs.readFileSync(srcPath).toString("utf8");
+    data = replaceAbsoluteInclude(relativePath, data);
+
+    fs.writeFileSync(destPath, data);
+}
+
+function copyDeclaration(
+    relativePath: string,
+    srcPath: string,
+    destPath: string,
+) {
+    let data = fs.readFileSync(srcPath).toString("utf8");
+    data = replaceAbsoluteInclude(relativePath, data);
+
+    fs.writeFileSync(destPath, data);
+}
+
+function copyMap(srcPath: string, destPath: string) {
+    let data = fs.readFileSync(srcPath).toString("utf8");
+    let json = JSON.parse(data);
+    json.sources = [path.basename(srcPath).replace(/.d.ts.map$/, ".ts")];
+
+    fs.writeFileSync(destPath, JSON.stringify(json));
+}
+
 function copyFiles() {
     const packages = fs.readdirSync("packages");
     const packageFiles = packages.map(
         (pkg) =>
             [
                 pkg,
-                getFiles(packageDist(pkg))
-                    .filter((filePath) => FILE_REGEX.test(filePath))
-                    .map((filePath) =>
-                        filePath.slice(packageDist(pkg).length + 1),
-                    ),
+                getFiles(packageDist(pkg)).map((filePath) =>
+                    filePath.slice(packageDist(pkg).length + 1),
+                ),
             ] as const,
     );
 
@@ -42,16 +88,18 @@ function copyFiles() {
                 recursive: true,
             });
 
-            const fileDepth = filePath.split("/").length;
-            const relativeRoot = new Array(fileDepth).fill("..").join("/");
+            const srcPath = path.join(packageDist(pkg), filePath);
+            const destPath = path.join("dist", pkg, filePath);
 
-            const data = fs
-                .readFileSync(path.join(packageDist(pkg), filePath))
-                .toString("utf8")
-                .replaceAll(SOURCE_MAP_REGEX, "")
-                .replaceAll("@moteur", relativeRoot);
-
-            fs.writeFileSync(path.join("dist", pkg, filePath), data);
+            if (srcPath.endsWith(".js")) {
+                copyJS(pkg, filePath, srcPath, destPath);
+            } else if (srcPath.endsWith(".d.ts")) {
+                copyDeclaration(filePath, srcPath, destPath);
+            } else if (srcPath.endsWith(".d.ts.map")) {
+                copyMap(srcPath, destPath);
+            } else {
+                fs.copyFileSync(srcPath, destPath);
+            }
         });
     });
 }

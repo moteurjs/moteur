@@ -17,6 +17,8 @@
         "target": "ESNext",
         "module": "ESNext",
         "moduleResolution": "Node",
-        "preserveSymlinks": true
+        "preserveSymlinks": true,
+        "declaration": true,
+        "declarationMap": true
     }
 }
