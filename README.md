@@ -2,10 +2,6 @@
 
 A tiny Web/TS engine.
 
-## :mag: Examples
-
--   [planet](./examples/planet/README.md): An example with UI/ECS interactions.
-
 ## :package: Packages
 
 -   `moteur/core`: Base game.
@@ -13,6 +9,11 @@ A tiny Web/TS engine.
 -   `moteur/event`: An event system.
 -   `moteur/gfx`: A WebGL renderer.
 -   `moteur/ui`: An interface with UI.
+
+## :mag: Examples
+
+-   [flappy](https://moteurjs.github.io/examples/flappy/): A flappy-bird clone.
+-   [planet](https://moteurjs.github.io/examples/planet/): An example with UI/ECS interactions.
 
 ## :round_pushpin: Getting Started
 
