@@ -28,7 +28,7 @@ function copyFiles() {
 
     packageFiles.forEach(([pkg, files]) => {
         files.forEach((filePath) => {
-            fs.mkdirSync(path.join("dist/lib", pkg, path.dirname(filePath)), {
+            fs.mkdirSync(path.join("dist", pkg, path.dirname(filePath)), {
                 recursive: true,
             });
 
@@ -41,7 +41,7 @@ function copyFiles() {
                 .replaceAll(SOURCE_MAP_REGEX, "")
                 .replaceAll("@moteur", relativeRoot);
 
-            fs.writeFileSync(path.join("dist/lib", pkg, filePath), data);
+            fs.writeFileSync(path.join("dist", pkg, filePath), data);
         });
     });
 }
@@ -52,9 +52,7 @@ function copyPackageJson() {
         engines: undefined,
         packageManager: undefined,
         scripts: undefined,
-        devDependencies: undefined,
-        main: "lib",
-        types: "lib",
+        devDependencies: undefined
     };
 
     fs.writeFileSync(

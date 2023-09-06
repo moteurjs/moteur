@@ -1,6 +1,6 @@
 {
     "name": "moteur",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A tiny Web/TS engine",
     "license": "MIT",
     "homepage": "https://github.com/alexandre-lavoie/moteur#readme",
