@@ -12,22 +12,32 @@ function createDist() {
     if (fs.existsSync("dist")) fs.rmSync("dist", { recursive: true });
 }
 
+function getFiles(nodePath: string): string[] {
+    if (!fs.statSync(nodePath).isDirectory()) return [nodePath];
+
+    return fs
+        .readdirSync(nodePath)
+        .flatMap((node) => getFiles(path.join(nodePath, node)));
+}
+
 function copyFiles() {
     const packages = fs.readdirSync("packages");
     const packageFiles = packages.map(
         (pkg) =>
             [
                 pkg,
-                (
-                    fs.readdirSync(packageDist(pkg), {
-                        recursive: true,
-                    }) as string[]
-                ).filter((node) => FILE_REGEX.test(node)),
+                getFiles(packageDist(pkg))
+                    .filter((filePath) => FILE_REGEX.test(filePath))
+                    .map((filePath) =>
+                        filePath.slice(packageDist(pkg).length + 1),
+                    ),
             ] as const,
     );
 
     packageFiles.forEach(([pkg, files]) => {
         files.forEach((filePath) => {
+            console.info("[Pack]", pkg, ">", filePath);
+
             fs.mkdirSync(path.join("dist", pkg, path.dirname(filePath)), {
                 recursive: true,
             });
@@ -55,20 +65,19 @@ function copyPackageJson() {
         packageManager: undefined,
         scripts: undefined,
         devDependencies: undefined,
-        files: [
-            ...packages,
-            "README.md"
-        ]
+        files: [...packages, "README.md"],
     };
 
     fs.writeFileSync(
         "dist/package.json",
         JSON.stringify(packageJson, null, 2) + "\n",
     );
+    console.info("[Pack] package.json");
 }
 
 function copyReadme() {
     fs.copyFileSync("README.md", "dist/README.md");
+    console.info("[Pack] README.md");
 }
 
 function main() {
