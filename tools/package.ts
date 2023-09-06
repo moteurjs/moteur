@@ -47,12 +47,18 @@ function copyFiles() {
 }
 
 function copyPackageJson() {
+    const packages = fs.readdirSync("packages");
+
     const packageJson = {
         ...JSON.parse(fs.readFileSync("package.json").toString("utf8")),
         engines: undefined,
         packageManager: undefined,
         scripts: undefined,
         devDependencies: undefined,
+        files: [
+            ...packages,
+            "README.md"
+        ]
     };
 
     fs.writeFileSync(
